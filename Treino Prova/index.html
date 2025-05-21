@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calendário</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/>
+  <style>
+    body {
+      background-color: #1C1C2E;
+      color: #FFF;
+      padding-bottom: 60px; /* espaço para a bottom-nav */
+    }
+    .calendar-header {
+      padding: 1rem 0;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+    .month-nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .month-nav button {
+      background: none;
+      border: none;
+      color: #FFF;
+      font-size: 1.5rem;
+    }
+    .btn-month {
+      background-color: #E0E0E0;
+      color: #333;
+      border-radius: 50px;
+      padding: 0.25rem 1rem;
+      font-weight: 400;
+      text-transform: none;
+    }
+    .weekday-row {
+      display: grid;
+      grid-template-columns: repeat(7, 2.5rem);
+      gap: 0.5%;             /* sem espaçamento entre as colunas */
+      padding: 0;         /* sem padding lateral */
+      justify-content: center;
+      text-align: center;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+    .weekday-row div {
+      line-height: 1;     /* ajusta o alinhamento vertical */
+    }
+    .calendar-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 2.5rem);
+      gap: 0.5%;      /* remove todo o espaçamento entre células */
+      padding: 1%;  /* remove padding lateral */
+      justify-content: center;
+    }
+    .calendar-grid .day {
+      width: 2.5rem;
+      height: 2.5rem;
+      border: 1px solid #FFF;
+      border-radius: 0.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.9rem;
+      margin: 0;
+    }
+    .calendar-grid .other-month {
+      color: #666;
+      border-color: #666;
+    }
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #111;
+      border-top: 1px solid #333;
+    }
+    .bottom-nav .nav-link {
+      color: #888;
+      padding: 0.75rem 0;
+      font-size: 1.4rem;
+      flex: 1;
+      text-align: center;
+    }
+    .bottom-nav .nav-link.active {
+      color: #FFF;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Cabeçalho -->
+    <div class="calendar-header">Calendário</div>
+
+    <!-- Navegação de mês/ano -->
+    <div class="month-nav">
+      <button id="prev"><i class="bi bi-chevron-compact-left"></i></button>
+      <button class="btn btn-month">Mês/Ano</button>
+      <button id="next"><i class="bi bi-chevron-compact-right"></i></button>
+    </div>
+
+    <!-- Dias da semana coladinhos -->
+    <div class="weekday-row">
+      <div>D</div><div>S</div><div>T</div><div>Q</div><div>Q</div><div>S</div><div>S</div>
+    </div>
+
+    <!-- Grade de dias coladinhos -->
+    <div class="calendar-grid">
+      <!-- Exemplo estático de 42 células -->
+      <div class="day other-month">29</div>
+      <div class="day other-month">30</div>
+      <div class="day">1</div>
+      <div class="day">2</div>
+      <div class="day">3</div>
+      <div class="day">4</div>
+      <div class="day">5</div>
+
+      <div class="day">6</div>
+      <div class="day">7</div>
+      <div class="day">8</div>
+      <div class="day">9</div>
+      <div class="day">10</div>
+      <div class="day">11</div>
+      <div class="day">12</div>
+
+      <div class="day">13</div>
+      <div class="day">14</div>
+      <div class="day">15</div>
+      <div class="day">16</div>
+      <div class="day">17</div>
+      <div class="day">18</div>
+      <div class="day">19</div>
+
+      <div class="day">20</div>
+      <div class="day">21</div>
+      <div class="day">22</div>
+      <div class="day">23</div>
+      <div class="day">24</div>
+      <div class="day">25</div>
+      <div class="day">26</div>
+
+      <div class="day">27</div>
+      <div class="day">28</div>
+      <div class="day">29</div>
+      <div class="day">30</div>
+      <div class="day">31</div>
+      <div class="day other-month">1</div>
+      <div class="day other-month">2</div>
+    </div>
+  </div>
+
+  <!-- Barra de navegação inferior -->
+  <nav class="bottom-nav">
+    <div class="d-flex">
+      <a href="#" class="nav-link"><i class="bi bi-house"></i></a>
+      <a href="#" class="nav-link"><i class="bi bi-list"></i></a>
+      <a href="#" class="nav-link"><i class="bi bi-plus-circle"></i></a>
+      <a href="#" class="nav-link active"><i class="bi bi-calendar3"></i></a>
+      <a href="#" class="nav-link"><i class="bi bi-gear"></i></a>
+    </div>
+  </nav>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
