@@ -1,0 +1,7 @@
+/* Customizações do site Loki */
+
+.hero-carousel .carousel-item {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Outras regras CSS personalizadas podem ser adicionadas aqui */

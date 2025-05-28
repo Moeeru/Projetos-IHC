@@ -4,13 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Loki • Série</title>
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    /* Sobrepor bordas sutis como na referência */
-    .hero-carousel .carousel-item {
-      border: 1px solid rgba(255,255,255,0.2);
-    }
-  </style>
+  <!-- CSS customizado -->
+  <link href="css/styles.css" rel="stylesheet">
 </head>
 <body class="bg-black text-light">
 
@@ -28,21 +25,21 @@
       <h5 class="offcanvas-title">Seções</h5>
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
     </div>
-    <div class="offcanvas-body">
+    <div class="offcanvas-body bg-dark">
       <div class="list-group">
-        <a href="#sinopse" class="list-group-item list-group-item-action">Sinopse</a>
-        <a href="#elenco" class="list-group-item list-group-item-action">Elenco</a>
-        <a href="#personagens" class="list-group-item list-group-item-action">Personagens</a>
-        <a href="#curiosidades" class="list-group-item list-group-item-action">Curiosidades</a>
-        <a href="#galeria" class="list-group-item list-group-item-action">Imagens</a>
-        <a href="#trilha" class="list-group-item list-group-item-action">Trilha Sonora</a>
+        <a href="#sinopse" class="list-group-item list-group-item-action ">Sinopse</a>
+        <a href="#elenco" class="list-group-item list-group-item-action ">Elenco</a>
+        <a href="#personagens" class="list-group-item list-group-item-action ">Personagens</a>
+        <a href="#curiosidades" class="list-group-item list-group-item-action ">Curiosidades</a>
+        <a href="#galeria" class="list-group-item list-group-item-action ">Imagens</a>
+        <a href="#trilha" class="list-group-item list-group-item-action ">Trilha</a>
       </div>
     </div>
   </div>
 
   <main class="pt-5">
 
-    <!-- HERO CAROUSEL (Carousel) -->
+    <!-- HERO CAROUSEL -->
     <section class="hero-carousel mb-5">
       <div id="carouselHero" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
@@ -62,30 +59,30 @@
       </div>
     </section>
 
-    <!-- TABS para navegação interna -->
+    <!-- TABS -->
     <ul class="nav nav-tabs justify-content-center mb-4" id="mainTabs" role="tablist">
       <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="sinopse-tab" data-bs-toggle="tab" data-bs-target="#sinopse">Sinopse</button>
+        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#sinopse">Sinopse</button>
       </li>
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="elenco-tab" data-bs-toggle="tab" data-bs-target="#elenco">Elenco</button>
+        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#elenco">Elenco</button>
       </li>
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="personagens-tab" data-bs-toggle="tab" data-bs-target="#personagens">Personagens</button>
+        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#personagens">Personagens</button>
       </li>
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="curiosidades-tab" data-bs-toggle="tab" data-bs-target="#curiosidades">Curiosidades</button>
+        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#curiosidades">Curiosidades</button>
       </li>
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="galeria-tab" data-bs-toggle="tab" data-bs-target="#galeria">Imagens</button>
+        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#galeria">Imagens</button>
       </li>
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="trilha-tab" data-bs-toggle="tab" data-bs-target="#trilha">Trilha</button>
+        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#trilha">Trilha</button>
       </li>
     </ul>
 
     <div class="tab-content container">
-      <!-- 1) Sinopse -->
+      <!-- Sinopse -->
       <div class="tab-pane fade show active" id="sinopse">
         <div class="row">
           <div class="col-md-8">
@@ -98,7 +95,7 @@
         </div>
       </div>
 
-      <!-- 2) Elenco (Cards) -->
+      <!-- Elenco -->
       <div class="tab-pane fade" id="elenco">
         <h2>Elenco</h2>
         <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -111,11 +108,11 @@
               </div>
             </div>
           </div>
-          <!-- mais cards de elenco... -->
+          <!-- mais cards... -->
         </div>
       </div>
 
-      <!-- 3) Personagens (Collapse) -->
+      <!-- Personagens -->
       <div class="tab-pane fade" id="personagens">
         <h2>Personagens</h2>
         <p>
@@ -126,10 +123,10 @@
             Variante de Loki que se rebelou contra o TVA.
           </div>
         </div>
-        <!-- mais itens collapse -->
+        <!-- mais collapse... -->
       </div>
 
-      <!-- 4) Curiosidades (Accordion) -->
+      <!-- Curiosidades -->
       <div class="tab-pane fade" id="curiosidades">
         <h2>Curiosidades</h2>
         <div class="accordion" id="curioAccordion">
@@ -145,11 +142,11 @@
               </div>
             </div>
           </div>
-          <!-- mais itens -->
+          <!-- mais itens... -->
         </div>
       </div>
 
-      <!-- 5) Galeria (Carousel interno) -->
+      <!-- Galeria -->
       <div class="tab-pane fade" id="galeria">
         <h2>Galeria</h2>
         <div id="carouselThumbs" class="carousel slide" data-bs-ride="carousel">
@@ -164,7 +161,7 @@
                 </div>
               </div>
             </div>
-            <!-- mais itens -->
+            <!-- mais itens... -->
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselThumbs" data-bs-slide="prev">
             <span class="carousel-control-prev-icon"></span>
@@ -175,13 +172,13 @@
         </div>
       </div>
 
-      <!-- 6) Trilha Sonora (List Group + Modal de áudio) -->
+      <!-- Trilha -->
       <div class="tab-pane fade" id="trilha">
         <h2>Trilha Sonora</h2>
         <ul class="list-group">
           <li class="list-group-item bg-secondary text-white">Theme – Loki</li>
           <li class="list-group-item bg-secondary text-white">Waltz of the Timekeepers</li>
-          <!-- mais faixas -->
+          <!-- mais faixas... -->
         </ul>
       </div>
     </div>
@@ -204,6 +201,9 @@
     </div>
   </div>
 
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- JS customizado -->
+  <script src="js/scripts.js"></script>
 </body>
 </html>
