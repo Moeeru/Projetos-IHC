@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Teste VLibras Inline</title>
+  <style>
+    /* Container flex dividindo em duas colunas iguais */
+    #container {
+      display: flex;
+      width: 100%;
+      height: 400px;
+      gap: 10px;
+    }
+    /* Área onde o player do VLibras será renderizado */
+    #vlibras-container[vw] {
+      flex: 1;
+      border: 1px solid #ccc;
+      position: relative;
+    }
+    /* Caixa de texto + botão */
+    #input-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    #text-input {
+      flex: 1;
+      width: 100%;
+      resize: none;
+      padding: 8px;
+      font-size: 1rem;
+    }
+    #translate-btn {
+      padding: 10px;
+      font-size: 1rem;
+      margin-top: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="container">
+    <!-- Inline VLibras: a biblioteca vai buscar este elemento [vw] e inserir o WebGL player aqui -->
+    <div id="vlibras-container"
+         vw
+         class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+
+    <div id="input-container">
+      <textarea id="text-input" placeholder="Digite a mensagem aqui..."></textarea>
+      <button id="translate-btn">Traduzir para Libras</button>
+    </div>
+  </div>
+
+  <!-- Importa a biblioteca VLibras -->
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Inicializa o VLibras dentro do <div vw> que você já preparou
+      var vlibrasWidget = new window.VLibras.Widget('https://vlibras.gov.br/app');
+
+      // Ao clicar, dispara a tradução do texto para Libras
+      document.getElementById('translate-btn')
+        .addEventListener('click', function() {
+          var msg = document.getElementById('text-input').value;
+          vlibrasWidget.translate(msg);
+        });
+    });
+  </script>
+
+</body>
+</html>
