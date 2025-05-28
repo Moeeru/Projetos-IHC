@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Loki • Série</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Sobrepor bordas sutis como na referência */
+    .hero-carousel .carousel-item {
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+  </style>
+</head>
+<body class="bg-black text-light">
+
+  <!-- NAVBAR + Offcanvas Menu -->
+  <nav class="navbar navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Loki</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuCanvas">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+  <div class="offcanvas offcanvas-end text-dark" id="menuCanvas">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title">Seções</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="list-group">
+        <a href="#sinopse" class="list-group-item list-group-item-action">Sinopse</a>
+        <a href="#elenco" class="list-group-item list-group-item-action">Elenco</a>
+        <a href="#personagens" class="list-group-item list-group-item-action">Personagens</a>
+        <a href="#curiosidades" class="list-group-item list-group-item-action">Curiosidades</a>
+        <a href="#galeria" class="list-group-item list-group-item-action">Imagens</a>
+        <a href="#trilha" class="list-group-item list-group-item-action">Trilha Sonora</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="pt-5">
+
+    <!-- HERO CAROUSEL (Carousel) -->
+    <section class="hero-carousel mb-5">
+      <div id="carouselHero" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="referencia-loki.jpg" class="d-block w-100" alt="Batalha Loki vs Loki">
+          </div>
+          <div class="carousel-item">
+            <img src="loki-elve.jpg" class="d-block w-100" alt="Loki vestido de elfo">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselHero" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselHero" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </section>
+
+    <!-- TABS para navegação interna -->
+    <ul class="nav nav-tabs justify-content-center mb-4" id="mainTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="sinopse-tab" data-bs-toggle="tab" data-bs-target="#sinopse">Sinopse</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="elenco-tab" data-bs-toggle="tab" data-bs-target="#elenco">Elenco</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="personagens-tab" data-bs-toggle="tab" data-bs-target="#personagens">Personagens</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="curiosidades-tab" data-bs-toggle="tab" data-bs-target="#curiosidades">Curiosidades</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="galeria-tab" data-bs-toggle="tab" data-bs-target="#galeria">Imagens</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="trilha-tab" data-bs-toggle="tab" data-bs-target="#trilha">Trilha</button>
+      </li>
+    </ul>
+
+    <div class="tab-content container">
+      <!-- 1) Sinopse -->
+      <div class="tab-pane fade show active" id="sinopse">
+        <div class="row">
+          <div class="col-md-8">
+            <h2>Sinopse</h2>
+            <p>Após os eventos de “Vingadores: Endgame”, Loki é capturado pelo TVA — Time Variance Authority — e passa a investigar...</p>
+          </div>
+          <div class="col-md-4">
+            <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#trailerModal">▶️ Ver Trailer</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2) Elenco (Cards) -->
+      <div class="tab-pane fade" id="elenco">
+        <h2>Elenco</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card bg-secondary text-white h-100">
+              <img src="tom-hiddleston.jpg" class="card-img-top" alt="Tom Hiddleston">
+              <div class="card-body">
+                <h5 class="card-title">Tom Hiddleston</h5>
+                <p class="card-text">Loki Laufeyson</p>
+              </div>
+            </div>
+          </div>
+          <!-- mais cards de elenco... -->
+        </div>
+      </div>
+
+      <!-- 3) Personagens (Collapse) -->
+      <div class="tab-pane fade" id="personagens">
+        <h2>Personagens</h2>
+        <p>
+          <a class="btn btn-link text-light" data-bs-toggle="collapse" href="#collapseSylvie">Sylvie, a Variante</a>
+        </p>
+        <div id="collapseSylvie" class="collapse">
+          <div class="card card-body bg-secondary">
+            Variante de Loki que se rebelou contra o TVA.
+          </div>
+        </div>
+        <!-- mais itens collapse -->
+      </div>
+
+      <!-- 4) Curiosidades (Accordion) -->
+      <div class="tab-pane fade" id="curiosidades">
+        <h2>Curiosidades</h2>
+        <div class="accordion" id="curioAccordion">
+          <div class="accordion-item bg-secondary text-white">
+            <h2 class="accordion-header" id="itemOne">
+              <button class="accordion-button collapsed bg-secondary text-white" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                O TVA originalmente existia nos quadrinhos?
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#curioAccordion">
+              <div class="accordion-body">
+                Sim, apareceu pela primeira vez em “Thor” #372, em 1986.
+              </div>
+            </div>
+          </div>
+          <!-- mais itens -->
+        </div>
+      </div>
+
+      <!-- 5) Galeria (Carousel interno) -->
+      <div class="tab-pane fade" id="galeria">
+        <h2>Galeria</h2>
+        <div id="carouselThumbs" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row g-2">
+                <div class="col-6">
+                  <img src="pose1.jpg" class="d-block w-100 rounded" alt="Pose 1">
+                </div>
+                <div class="col-6">
+                  <img src="pose2.jpg" class="d-block w-100 rounded" alt="Pose 2">
+                </div>
+              </div>
+            </div>
+            <!-- mais itens -->
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselThumbs" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselThumbs" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- 6) Trilha Sonora (List Group + Modal de áudio) -->
+      <div class="tab-pane fade" id="trilha">
+        <h2>Trilha Sonora</h2>
+        <ul class="list-group">
+          <li class="list-group-item bg-secondary text-white">Theme – Loki</li>
+          <li class="list-group-item bg-secondary text-white">Waltz of the Timekeepers</li>
+          <!-- mais faixas -->
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal Trailer -->
+  <div class="modal fade" id="trailerModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark text-light">
+        <div class="modal-header">
+          <h5 class="modal-title">Trailer Oficial</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/ULhQk91PURA" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
