@@ -1,50 +1,49 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
 	<title>Futebolando</title>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="stylesheet" href="css/cssalunos.css" type="text/css"/>	
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 
-<body class="pb-5" data-bs-theme="light">
 
+
+<body class="pb-5" data-bs-theme="light">
 	<!--Menu do Site-->
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-light fixed-top shadow bg-white">
-
 			<div class="container-fluid">
 				<a class="navbar-brand" href="#">
-					<img src="img/logo-mundofut_semfundo.PNG" alt="Mundo Futebol!">
+					<img src="img/logo-mundofut_semfundo.png" alt="Mundo Futebol">
 				</a>
 
-				<!-- Botão do menu Sanduiche-->
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuHamburguer" aria-controls="menuHamburguer" aria-expanded="false" aria-label="Toggle navigation">
+				<!-- Botão do menu sanduíche -->
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuHamburguer"
+					aria-controls="menuHamburguer" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 
-				<!-- Itens que colapsam -->
 				<div class="collapse navbar-collapse" id="menuHamburguer">
-					<!-- Menu -->
 					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 						<li class="nav-item">
 							<a class="nav-link active" aria-current="page" href="#inicio">Home</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link active" href="#historia">História</a>
+							<a class="nav-link" href="#historia">História</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link active" href="#galeria">Galeria</a>
+							<a class="nav-link" href="#galeria">Galeria</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link active" data-bs-toggle="offcanvas" href="#exemplooffcanvas" role="button">Contato</a>
+							<a class="nav-link" data-bs-toggle="offcanvas" href="#exemplooffcanvas" role="button"
+								aria-controls="offcanvasExample">Contato</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link active" href="#">
-								<i class="bi bi-whatsapp"></i>
-							</a>
+							<a class="nav-link" href="#"><i class="bi bi-whatsapp"></i></a>
 						</li>
 						<li class="nav-item">
 							<div class="form-check form-switch mt-2 ms-2">
@@ -55,13 +54,11 @@
 					</ul>
 				</div>
 			</div>
-			
 		</nav>
-
 	</header>
-	<main id="inicio">
-		<article class="container-fluid mt-2 rounded-4">
-			<div class="row m-5 p-3 border rounded-4 mt-5">
+	<main>
+		<article class="container-fluid rounded-4">
+			<div class="row m-1 p-3 border rounded-4">
 				<div class="col-12">
 					<h2>Bem-vindos!</h2>
 					<p>
@@ -88,9 +85,9 @@
 		</article>
 
 		<section class="container-fluid mt-3">
-			<div class="row p-3 border rounded-4 mx-2">
+			<div class="row p-3 mx-2 rounded-4 border">
 				<div class="col-lg-4 mt-2">
-					<h2 id="historia">História do Futebol</h2>
+					<h2>História do Futebol</h2>
 					<p>
 						O futebol, como o conhecemos hoje, tem suas raízes em jogos populares praticados por
 						civilizações antigas em várias partes do mundo. No entanto, o esporte moderno começou a tomar
@@ -107,7 +104,7 @@
 					</p>
 				</div>
 				<div class="col-lg-4 mt-2 text-center">
-					<img src="img/tacafifa.png" class="img-fluid d-block w-75 ps-5" alt="Taça da FIFA">
+					<img src="img/tacafifa.png" class="img-fluid d-block w-75 ps-5">
 				</div>
 				<div class="col-lg-4 mt-2">
 					<h2>História das Copas do mundo</h2>
@@ -135,7 +132,7 @@
 		<section class="container-fluid mt-2 rounded-4">
 			<div class="row m-1 p-3 border rounded-4">
 				<div class="col-12">
-					<table class="table table-striped table-bordered table-hover">
+					<table class="table table-striped table-hover">
 						<h2>Edições da Copa (até 2018)</h2>
 						<tr>
 							<td class="text-center">1930</td>
@@ -226,162 +223,148 @@
 
 		<h1 id="galeria" class="ps-3 pt-3">Galeria dos craques - Parte 1</h1>
 		<div class="container-fluid">
-			<div class="row row-cols-md-2 row-cols-sm-2 row-cols-sm-1 row-cols-lg-5">
-				
-				<!-- Pele -->
+			<div class="row row-cols-md-2 row-cols-sm-1 row-cols-lg-5">
+
 				<div class="col d-flex">
 					<div class="card h-100 w-100">
-						<div class="card-body d-flex flex-column align-items-center">
-							<img class="card-img-top" src='img/pele.png' alt="Pelé">
+						<div class="card-body d-flex flex-column">
+							<img class="card-img-top" src="img/pele.png" alt="Pelé">
 							<h2 class="card-title">Pelé</h2>
-							<p class="card-text">Um dos maiores goleadores da história do futebol, com três títulos de Copa do Mundo.</p>
-							<button type="button" class="btn btn-padrao mt-auto btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
-								Saber Mais
-							</button>
+							<p class="card-text">Um dos maiores goleadores da história da Copa do Mundo.</p>
+							<button class="btn btn-padrao mt-auto btn-success" data-bs-toggle="modal"
+								data-bs-target="#exampleModal">Saber Mais</button>
 						</div>
 					</div>
 				</div>
-				
-				<!-- Maradona -->
 				<div class="col d-flex">
 					<div class="card h-100 w-100">
-						<div class="card-body d-flex flex-column align-items-center">
-							<div>
-								<img class="card-img-top" src='img/maradona.png' alt="Maradona">
-								<h2 class="card-title">Diego Maradona</h2>
-								<p class="card-text">Lendário jogador argentino conhecido por sua visão de jogo e o famoso "Gol do Século".</p>
-								<button type="button" class="btn btn-padrao mt-auto btn-success" data-bs-toggle="popover" data-bs-title="Se acha..."
-									data-bs-content="Este era só um argentino folgado mesmo">Saiba Mais</button>
-							</div>
+						<div class="card-body d-flex flex-column">
+							<img class="card-img-top" src="img/maradona.png" alt="Maradona">
+							<h2 class="card-title">Diego Maradona</h2>
+							<p class="card-text">Lendário jogador argentino conhecido por sua visão de jogo e o famoso
+								"Gol do Século".</p>
+							<button type="button" class="btn btn-padrao mt-auto btn-success" data-bs-toggle="popover"
+								data-bs-title="Se acha..."
+								data-bs-content="Este era só um argentino folgado mesmo">Saiba Mais</button>
 						</div>
 					</div>
 				</div>
-	
-				<!-- Messi -->
 				<div class="col d-flex">
 					<div class="card h-100 w-100">
-						<div class="card-body d-flex flex-column align-items-center">
-							<div>
-								<img class="card-img-top" src='img/messi.png' alt="Messi">
-								<h2 class="card-title">Lionel Messi</h2>
-								<p class="card-text">Reconhecido como um dos jogadores mais talentosos da atualidade, famoso por suas habilidades de
-									dribble e finalização.</p>
-							</div>
+						<div class="card-body d-flex flex-column">
+							<img class="card-img-top" src="img/messi.png" alt="Messi">
+							<h2 class="card-title">Lionel Messi</h2>
+							<p class="card-text">
+								Reconhecido como um dos jogadores mais talentosos da atualidade, famoso por suas
+								habilidades de dribble e finalização.
+							</p>
 						</div>
 					</div>
 				</div>
-	
-				<!-- Cristiano -->
 				<div class="col d-flex">
 					<div class="card h-100 w-100">
-						<div class="card-body d-flex flex-column align-items-center">
-							<div>
-								<img class="card-img-top" src='img/cristiano.png' alt="Cristiano Ronaldo">
-								<h2 class="card-title">Cristiano Ronaldo</h2>
-								<p class="card-text">Combinando força, velocidade e habilidade, Ronaldo se destaca como um dos maiores goleadores
-									modernos.</p>
-							</div>
+						<div class="card-body d-flex flex-column">
+							<img class="card-img-top" src="img/cristiano.png" alt="Cristiano Ronaldo">
+							<h2 class="card-title">Cristiano Ronaldo</h2>
+							<p class="card-text">
+								Combinando força, velocidade e habilidade, Ronaldo se destaca como um dos maiores
+								goleadores modernos.
+							</p>
 						</div>
 					</div>
 				</div>
-
-				<!-- Johan -->
 				<div class="col d-flex">
 					<div class="card h-100 w-100">
-						<div class="card-body d-flex flex-column align-items-center">
-							<div>
-								<img class="card-img-top" src='img/cruyff.png' alt="Cruyff">
-								<h2 class="card-title">Johan Cruyff</h2>
-								<p class="card-text">Revolucionou o futebol com sua visão tática e o estilo de jogo total de futebol.</p>
-							</div>
+						<div class="card-body d-flex flex-column">
+							<img class="card-img-top" src="img/cruyff.png" alt="Cruyff">
+							<h2 class="card-title">Johan Cruyff</h2>
+							<p class="card-text">
+								Revolucionou o futebol com sua visão tática e o estilo de jogo total de futebol.
+							</p>
 						</div>
 					</div>
 				</div>
-
 			</div>
-
 		</div>
-
-		<div class="accordion mx-2 mt-2" id="accordionExample">
-			<div class="accordion-item">
-				<h2 class="accordion-header" id="headingOne">
-					<button class="btn btn-padrao mt-auto" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+		</div>
+		<div>
+			<div>
+				<h2 id="headingOne">
+					<button type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
 						aria-controls="collapseOne">
 						<h2>Galeria dos Craques - Parte 2</h2>
 					</button>
 				</h2>
-				<div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-					<div class="accordion-body">
-						<div class="container-fluid">
-							<div class="row row-cols-md-2 row-cols-sm-2 row-cols-sm-1 row-cols-lg-5">
-
-								<!-- Alfred -->
-								<div class="col d-flex">
-									<div class="card h-100 w-100">
-										<div class="card-body d-flex flex-column align-items-center">
-											<div>
-												<img class="card-img-top" src='img/stefano.png' alt="Stefano">
-												<h2 class="card-title">Alfredo Di Stéfano</h2>
-												<p class="card-text">Conhecido como o "Coração da Lenda" do Real Madrid, Di Stéfano é
-													considerado um dos melhores jogadores de todos os tempos.</p>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<!--  -->
-								<div class="col d-flex">
-									<div class="card h-100 w-100">
-										<div class="card-body d-flex flex-column align-items-center">
-											<div>
-												<img class="card-img-top" src='img/zidane.png' alt="Zidane">
-												<h2 class="card-title" >Zinedine Zidane</h2>
-												<p class="card-text" >Famoso por sua habilidade de toque de bola e suas atuações em momentos
-													cruciais, como na final da Copa do Mundo de 1998.</p>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<!--  -->
-								<div class="col d-flex">
-									<div class="card h-100 w-100">
-										<div class="card-body d-flex flex-column align-items-center">
-											<div>
-												<img class="card-img-top" src='img/fenomeno.png' alt="Ronaldinho Fenômeno">
-												<h2 class="card-title" >Ronaldo Nazário</h2>
-												<p class="card-text" >Apelidado de "Fenômeno", Ronaldo tinha uma combinação única de velocidade
-													e habilidade, conquistando títulos a nível de clubes e seleção.</p>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<!--  -->
-								<div class="col d-flex">
-									<div class="card h-100 w-100">
-										<div class="card-body d-flex flex-column align-items-center">
-											<div>
-												<img class="card-img-top" src='img/platini.png' alt="Platini">
-												<h2 class="card-title">Michel Platini</h2>
-												<p class="card-text">Meio-campista francês que se destacou na década de 1980, sendo um jogador
-													criativo e influente no campo.</p>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<!--  -->
-								<div class="col d-flex">
-									<div class="card h-100 w-100">
-										<div class="card-body d-flex flex-column align-items-center">
-											<div>
-												<img class="card-img-top" src='img/beckenbauer.png' alt="Beckenbauer">
-												<h2 class="card-title">Franz Beckenbauer</h2>
-												<p class="card-text">Conhecido como "Der Kaiser", Beckenbauer é uma lenda alemã que se
-													destacou como jogador e treinador</p>
-											</div>
-										</div>
+				<div id="collapseOne" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+					<div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+						data-bs-parent="#accordionExample">
+						<div class="accordion" id="accordionExample">
+							<div class="accordion-item">
+								<h2 class="accordion-header" id="headingOne">
+									<button class="accordion-button" type="button" data-bs-toggle="collapse"
+										data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+										Galeria dos Craques - Parte 2
+									</button>
+								</h2>
+								<div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+									data-bs-parent="#accordionExample">
+									<div class="accordion-body">
+										<div class="container-fluid">
+											<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
+												<div class="col d-flex">
+													<div class="card h-100 w-100">
+														<img src="img/stefano.png" class="card-img-top" alt="Stefano">
+														<div class="card-body">
+															<h5 class="card-title">Alfredo Di Stéfano</h5>
+															<p class="card-text">Conhecido como o "Coração da Lenda" do
+																Real Madrid.</p>
+														</div>
+													</div>
+												</div>
+												<div class="col d-flex">
+													<div class="card h-100 w-100">
+														<img src="img/zidane.png" class="card-img-top" alt="Zidane">
+														<div class="card-body">
+															<h5 class="card-title">Zinedine Zidane</h5>
+															<p class="card-text">Famoso por sua habilidade e atuações
+																decisivas, como na Copa de 1998.</p>
+														</div>
+													</div>
+												</div>
+												<div class="col d-flex">
+													<div class="card h-100 w-100">
+														<img src="img/fenomeno.png" class="card-img-top"
+															alt="Ronaldo Fenômeno">
+														<div class="card-body">
+															<h5 class="card-title">Ronaldo Nazário</h5>
+															<p class="card-text">"Fenômeno" brasileiro com talento,
+																velocidade e títulos memoráveis.</p>
+														</div>
+													</div>
+												</div>
+												<div class="col d-flex">
+													<div class="card h-100 w-100">
+														<img src="img/platini.png" class="card-img-top" alt="Platini">
+														<div class="card-body">
+															<h5 class="card-title">Michel Platini</h5>
+															<p class="card-text">Meia francês criativo e influente na
+																década de 1980.</p>
+														</div>
+													</div>
+												</div>
+												<div class="col d-flex">
+													<div class="card h-100 w-100">
+														<img src="img/beckenbauer.png" class="card-img-top"
+															alt="Beckenbauer">
+														<div class="card-body">
+															<h5 class="card-title">Franz Beckenbauer</h5>
+															<p class="card-text">"Der Kaiser", lenda do futebol alemão
+																como jogador e técnico.</p>
+														</div>
+													</div>
+												</div>
+											</div> <!-- row -->
+										</div> <!-- container -->
 									</div>
 								</div>
 							</div>
@@ -389,7 +372,6 @@
 					</div>
 				</div>
 			</div>
-		</div>
 	</main>
 	<footer>
 		&copy; Criado por Henrique Martins Evaristo - 2023
@@ -407,7 +389,7 @@
 					Aqui estaria o texto com mais informações sobre o Rei Pelé
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-padrao btn-danger" data-bs-dismiss="modal">Fechar</button>
+					<button type="button" class="btn btn-padrao" data-bs-dismiss="modal">Fechar</button>
 				</div>
 			</div>
 		</div>
@@ -477,9 +459,10 @@
 		</div>
 	</div>
 	<!--Fim Offcanvas-->
-
-<!--Scripts Adicionais-->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+		crossorigin="anonymous"></script>
+	<!--Scripts Adicionais-->
 
 	<script>
 		//Script para acionar Popover - Conforme documentação do Bootstrap

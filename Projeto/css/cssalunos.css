@@ -8,4 +8,30 @@ body {
     padding-top: 9rem;
   }
 
+input[type="checkbox"] {
+    border: 2px solid var(--verde-claro);
+    box-shadow: none;
+}
 
+input[type="checkbox"]:checked,
+input[type="checkbox"]:focus {
+    background-color: var(--verde-claro);
+    border-color: var(--verde-claro);
+    box-shadow: none;
+    outline: none;
+}
+
+.btn-padrao {
+    background-color: var(--verde-claro);
+    color: rgb(255, 255, 255, 1.0);
+}
+
+.btn-padrao:hover {
+    background-color: var(--verde-escuro);
+    color: rgb(255, 255, 255, 1.0);
+}
+
+.icones {
+  font-size: 2rem;
+  color: var(--verde-claro);
+}
